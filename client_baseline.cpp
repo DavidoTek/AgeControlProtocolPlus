@@ -302,7 +302,7 @@ time_t ping_to_get_rtt(int sockfd,struct addrinfo *p){
     rtt_total+=(recv_time-send_time);
   }//for;
   RTT= rtt_total/seqNum;//avg RTT
-  //return RTT;
+  return RTT;
 }
 
 int main(int argc, char *argv[])

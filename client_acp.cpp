@@ -418,6 +418,8 @@ static void *controlAction(void* x1) {
     this_thread::sleep_for(chrono::nanoseconds(scheduleTime));
     int something_useless;
     controlAction(&something_useless);
+
+  return NULL;
 }
 
 unsigned char *package(unsigned int seq) {
