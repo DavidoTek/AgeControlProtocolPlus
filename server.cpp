@@ -144,7 +144,7 @@ int main(void)
   if(clock_gettime(CLOCK_REALTIME,&startTime)==-1){
     printf("error\n");
   }  
-  fileServerLog << "Seq;Time;Timestamp;PacketSize\n";
+  fileServerLog << "Seq;Time;Timestamp;PacketSize" << std::endl;
 
   do{
     memset(buf,0,sizeof(buf));//might not be needed
@@ -161,7 +161,7 @@ int main(void)
     if(clock_gettime(CLOCK_REALTIME,&currentTime)==-1){
       printf("error\n");
     }
-    fileServerLog << seq << ";" << getDoubleTimeDiff(&startTime,&currentTime) << ";" << getDoubleTime(currentTime) << ";" << numbytes << "\n";
+    fileServerLog << seq << ";" << getDoubleTimeDiff(&startTime,&currentTime) << ";" << getDoubleTime(currentTime) << ";" << numbytes << std::endl;
 
     //outputs reciving a packet
     /*printf("listener: got packet from %s\n",
