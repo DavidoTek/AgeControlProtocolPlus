@@ -262,7 +262,7 @@ mtx.unlock();
 //  
     mtx.unlock();		//done with mutex for control
     //printf("Exiting Rx Block\n");
-    fileYLog << getDoubleTimeNow() << "\t" << RTT << "\t" << systemTime[receiver_seq]<< "\t" << depTime << "\t" << controlPacketDelay[controlIndex - 1] << "\t" << controlDepartureTime[controlIndex - 1] << "\t" << controlIndex << "\t" << currentReceiveTime << "\t" << currentControlTime << "\t" << std::endl;
+    fileYLog << receiver_seq << "\t" << getDoubleTimeNow() << "\t" << RTT << "\t" << systemTime[receiver_seq]<< "\t" << depTime << "\t" << controlPacketDelay[controlIndex - 1] << "\t" << controlDepartureTime[controlIndex - 1] << "\t" << controlIndex << "\t" << currentReceiveTime << "\t" << currentControlTime << "\t" << std::endl;
 
     fileRxLog << getDoubleTimeNow() << "\t" << receiver_seq << "\t" << systemTime[receiver_seq] << endl;
   }
